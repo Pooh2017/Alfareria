@@ -1,0 +1,48 @@
+.home-container {
+  background-image: url('/public/fondo.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  background-color: rgba(255, 248, 235, 0.9);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(85, 60, 40, 0.3);
+  text-align: center;
+  max-width: 700px;
+}
+
+.hero h1 {
+  color: #5d4020;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+}
+
+.hero p {
+  color: #7a5c43;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.home-buttons button {
+  background-color: #a9805e;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  margin: 0 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-buttons button:hover {
+  background-color: #8f6b4d;
+}

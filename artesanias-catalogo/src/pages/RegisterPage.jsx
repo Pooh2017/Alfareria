@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { registerUser } from '../api/authService';
 import { useNavigate, Link } from 'react-router-dom';
+import '../styles/RegisterPage.css';
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -67,26 +68,26 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center p-4">
-      <div className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-8 w-full max-w-md border border-white/20">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-white mb-2">Registro</h2>
-          <p className="text-white/70">Crea una cuenta nueva</p>
+    <div className="register-container">
+      <div className="form-box">
+        <div className="form-header">
+          <h2 className="form-title">Registro</h2>
+          <p className="form-subtitle">Crea una cuenta nueva</p>
         </div>
 
         {error && (
-          <div className="bg-red-500/20 border border-red-500/50 rounded-lg p-3 mb-6 text-red-100 text-sm">
+          <div className="form-error">
             ⚠️ {error}
           </div>
         )}
 
         {success && (
-          <div className="bg-green-500/20 border border-green-500/50 rounded-lg p-3 mb-6 text-green-100 text-sm">
+          <div className="form-success">
             ✅ {success}
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="form-body">
           <input
             type="text"
             name="nombre"
@@ -94,7 +95,7 @@ const RegisterPage = () => {
             value={formData.nombre}
             onChange={handleChange}
             disabled={loading}
-            className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-white/50"
+            className="input-text"
           />
           <input
             type="text"
@@ -103,7 +104,7 @@ const RegisterPage = () => {
             value={formData.apellido}
             onChange={handleChange}
             disabled={loading}
-            className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-white/50"
+            className="input-text"
           />
           <input
             type="email"
@@ -112,7 +113,7 @@ const RegisterPage = () => {
             value={formData.correo}
             onChange={handleChange}
             disabled={loading}
-            className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-white/50"
+            className="input-text"
           />
           <input
             type="password"
@@ -121,21 +122,21 @@ const RegisterPage = () => {
             value={formData.contraseña}
             onChange={handleChange}
             disabled={loading}
-            className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-white/50"
+            className="input-text"
           />
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 disabled:cursor-not-allowed"
+            className="submit-button"
           >
             {loading ? 'Registrando...' : 'Registrar'}
           </button>
         </form>
 
-        <div className="mt-6 text-center text-white/70">
+        <div className="form-footer">
           ¿Ya tienes cuenta?{' '}
-          <Link to="/login" className="text-blue-400 hover:text-blue-300 font-medium">
+          <Link to="/login" className="login-link">
             Inicia sesión
           </Link>
         </div>

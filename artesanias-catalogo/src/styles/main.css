@@ -5,7 +5,7 @@ body {
 }
 
 nav {
-  background: #2196F3;
+  background: #5a3f17b7;
   padding: 10px;
   color: white;
   display: flex;
@@ -28,7 +28,7 @@ nav button {
 footer {
   text-align: center;
   padding: 15px;
-  background: #2196F3;
+  background: #000000;
   color: white;
   position: fixed;
   bottom: 0;

@@ -9,6 +9,7 @@ import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
 import AdminDashboard from '../pages/AdminDashboard';
 import ArtesanosPage from '../pages/ArtesanosPage';
+import AdminProductos from '../pages/AdminProductos';
 import NotFound from '../pages/NotFound';
 
 import PrivateRoute from './PrivateRoute';
@@ -43,11 +44,21 @@ const AppRouter = () => (
         <AdminDashboard />
       </PrivateRoute>
     }
-  />
+      />
+  <Route
+  path="/admin/productos"
+  element={
+    <PrivateRoute>
+      <AdminProductos />
+    </PrivateRoute>
+  }
+/>
+
       <Route path="*" element={<NotFound />} />
     </Routes>
     <Footer />
   </Router>
+  
 );
 
 export default AppRouter;

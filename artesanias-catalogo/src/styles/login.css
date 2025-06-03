@@ -1,10 +1,10 @@
 .login-container {
+  background-image: url('/public/fondo2.jpeg'); 
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  background: linear-gradient(135deg, #1e3a8a, #7c3aed, #4f46e5); /* Azul a morado */
 }
 
 .login-box {
@@ -69,14 +69,14 @@
   font-size: 1rem;
   border-radius: 0.75rem;
   border: none;
-  background: linear-gradient(90deg, #7c3aed, #4f46e5);
+  background: linear-gradient(90deg, #31361f, #31361f);
   color: white;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .login-box button:hover:not(:disabled) {
-  background: linear-gradient(90deg, #5b21b6, #4338ca);
+  background: linear-gradient(90deg, #271a1a, #344421);
   transform: scale(1.05);
 }
 
@@ -94,14 +94,14 @@
 }
 
 .login-box .register-link a {
-  color: #a78bfa;
+  color: #524442;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .login-box .register-link a:hover {
-  color: #d8b4fe;
+  color: #100f11;
 }
 
 /* Error box */
