@@ -9,7 +9,10 @@ import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
 import AdminDashboard from '../pages/AdminDashboard';
 import ArtesanosPage from '../pages/ArtesanosPage';
+import UsuariosPage from '../pages/UsuariosPage';
+import CategoriasPage from '../pages/CategoriasPage';
 import NotFound from '../pages/NotFound';
+import ProductosPage from '../pages/ProductosPage';
 
 import PrivateRoute from './PrivateRoute';
 
@@ -33,6 +36,30 @@ const AppRouter = () => (
         element={
         <PrivateRoute>
            <ArtesanosPage />
+        </PrivateRoute>
+        }
+      />
+      <Route
+        path="/admin/productos"
+        element={
+        <PrivateRoute>
+           <ProductosPage />
+        </PrivateRoute>
+        }
+      />
+      <Route
+        path="/admin/usuarios"
+        element={
+        <PrivateRoute>
+           <UsuariosPage />
+        </PrivateRoute>
+        }
+      />
+      <Route
+        path="/admin/categorias"
+        element={
+        <PrivateRoute>
+           <CategoriasPage />
         </PrivateRoute>
         }
       />

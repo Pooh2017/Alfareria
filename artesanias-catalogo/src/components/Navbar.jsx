@@ -17,6 +17,9 @@ const Navbar = () => {
             <>
               <Link to="/admin/dashboard">Panel Admin</Link>
               <Link to="/admin/artesanos">Gestionar Artesanos</Link>
+              <Link to="/admin/productos">Gestionar Productos</Link>
+              <Link to="/admin/usuarios">Gestionar Usuarios</Link>
+              <Link to="/admin/categorias">Gestionar categorias</Link>
               {/* Otros links exclusivos para admin */}
             </>
           )}
